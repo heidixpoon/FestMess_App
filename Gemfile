@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'puma'
 
 gem 'validates_email_format_of'
 
