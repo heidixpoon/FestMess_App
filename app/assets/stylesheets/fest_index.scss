@@ -1,0 +1,30 @@
+.jumbotron1 {
+  background-image: url('http://www.fuelroom.com/wp-content/uploads/2014/04/concert_crowd-wallpaper-1280x800.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 530px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin-top: -13%;
+}
+
+.container2{
+  text-align: center;
+  margin-top: 20%;
+  color: white;
+  font-family: 'Martel Sans', sans-serif;
+}
+
+.contain{
+  // font-size: 3.5em;
+  // font-weight: bold;
+  text-shadow: 0 0 13px rgba(0,0,0,0.5);
+
+
+}
