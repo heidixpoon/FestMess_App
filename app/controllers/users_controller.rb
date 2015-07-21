@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  # skip_before_action :require_login, only: [:new, :create]
+
+  skip_before_action :require_login, only: [:new, :create]
+
 
   def index
 
@@ -12,8 +14,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = 'Welcome!'
-      redirect_to lists_path
+      login(params[:user][:email], params[:user][:password])
 
       # redirect_to root_path
     else
