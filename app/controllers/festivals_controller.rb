@@ -1,10 +1,10 @@
 class FestivalsController < ApplicationController
-  # before_action :require_login, :only => :create
+  # before_action :require_login
   before_action :set_festival, only: [:show, :edit, :update, :destroy]
 
 
 	def index
-		@festivals = List.all
+		@festivals = Festival.all
 
 	end
 

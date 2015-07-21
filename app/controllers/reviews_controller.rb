@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  skip_before_action :require_login, except: [:new, :create]
+
   # before_action :require_login, :only => :create
   before_action :set_review, only: [:show, :edit, :update, :destroy]
 
