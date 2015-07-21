@@ -17,7 +17,7 @@ class FestivalsController < ApplicationController
 
 
 	def show
-		@festival = @user.festivals.find(params[:id])
+		@festival = Festival.find(params[:id])
 	end
 
 	def edit
