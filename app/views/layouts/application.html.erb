@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
   <title>FestMessApp</title>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'googlemap', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
+
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <!-- Optional theme -->
@@ -21,13 +29,15 @@
 <body>
 
   <div id="fb-root"></div>
-  <script>(function(d, s, id) {
+  <script>
+    (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
     fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 
 
   <div class="navbar navbar-default navbar-fixed-top">
@@ -52,9 +62,8 @@
   </div>
 
 
-
-
 <%= yield %>
+
 
 </body>
 </html>
