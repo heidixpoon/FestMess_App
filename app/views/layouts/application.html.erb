@@ -43,21 +43,16 @@
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <ul class="nav navbar-nav pull-right">
-      <!-- <ul class="nav nav-tabs"> -->
-        <% if current_user %>Welcome back, <%= current_user.name %>.
-          <li><%= link_to "Home", festivals_path %></li>
-          <li><button type="button" class="btn btn-default navbar-btn"><%= link_to "Log Out", log_out_path %></button></li>
+        <% if current_user %>
+          <li class="welcome-user">Welcome back,<%= current_user.name %>!</li>
+          <li><button type="button" class="btn btn-default btn-lg outline"><%= link_to "Home", festivals_path, :class => 'someclass' %></button></li>
+          <li><button type="button" class="btn btn-default btn-lg outline"><%= link_to "Log Out", log_out_path, :class => 'someclass' %></button></li>
         <% else %>
-          <li><button type="button" class="btn btn-default btn-lg outline"><%= link_to "Sign Up", sign_up_path %></button></li>
-          <li><button type="button" class="btn btn-default btn-lg outline"><%= link_to "Log In", log_in_path %></button></li>
+          <li><button type="button" class="btn btn-default btn-lg outline"><%= link_to "Sign Up", sign_up_path, :class => 'someclass' %></button></li>
+          <li><button type="button" class="btn btn-default btn-lg outline"><%= link_to "Log In", log_in_path, :class => 'someclass' %></button></li>
         <% end %>
       </ul>
-      <% if current_user %>
-        <ul class="nav navbar-nav pull-right">
-          <li><span><%= current_user.name %></span></li>
-          <li><%= link_to 'Log Out', log_out_path, method: :delete %></li>
-        </ul>
-      <% end %>
+
     </div>
   </div>
 
