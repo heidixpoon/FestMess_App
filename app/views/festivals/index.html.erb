@@ -9,19 +9,15 @@
 
 <div class="container-fluid banner"></div>
 
+
 <div class = "create_space">
-<div class="festpic">
-<% @festivals.each do |festival| %>
-    <div class="col-md-6 eachrow">
-
-      <a href="<%= festival_path(festival) %>">
-        <img src="<%= festival.pic %>" class="festival_pic">
-      </a>
-
-    </div>
+  <div class="festpic">
+    <% @festivals.each do |festival| %>
+      <div class="col-md-6 eachrow">
+        <a href="<%= festival_path(festival) %>">
+          <img src="<%= festival.pic %>" class="festival_pic">
+        </a>
+      </div>
+    <% end %>
   </div>
-<% end %>
-
-</div>
-
 </div>
