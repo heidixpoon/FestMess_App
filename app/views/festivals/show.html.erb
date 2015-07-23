@@ -9,8 +9,11 @@
   </div>
 </div>
 
-<div class="form">
-  <%= render 'form' %>
+
+<div class = "for_form">
+  <div class="form">
+    <%= render 'form' %>
+  </div>
 </div>
 
 
@@ -20,5 +23,6 @@
 
 
 <script type="text/javascript">
+  var actualaddress= "<%= @festival.address %>"
   initializeFestMap();
 </script>

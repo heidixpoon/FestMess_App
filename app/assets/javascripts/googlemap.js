@@ -1,7 +1,6 @@
 
   var geocoder;
   var map;
-  var address ="1952 una ct, fremont,ca";
 
   function initializeFestMap() {
     geocoder = new google.maps.Geocoder();
@@ -16,13 +15,13 @@
     };
     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
     if (geocoder) {
-      geocoder.geocode( { 'address': address}, function(results, status) {
+      geocoder.geocode( { 'address': actualaddress}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
           if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
           map.setCenter(results[0].geometry.location);
 
             var infowindow = new google.maps.InfoWindow(
-                { content: '<b>'+address+'</b>',
+                { content: '<b>'+actualaddress+'</b>',
                   size: new google.maps.Size(150,50)
                 });
 
