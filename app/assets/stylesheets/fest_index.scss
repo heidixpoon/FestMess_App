@@ -29,24 +29,40 @@
 }
 
 .create_space {
-  margin-top: 30%;
+  margin-top: 40%;
+  margin-left: 20%;
+  margin-right: auto;
+  // margin: 35% 10% 2% 10%;
+
   // background-color: black;
 }
 
 .festpic {
   // margin-top: 30%;
-  margin: 2% 10% 2% 10%;
+  // margin: 2% 10% 2% 10%;
 
 }
 
 
 .festival_pic {
   max-width:70%;
-  height:200px;
+  height:270px;
+  border: 1px solid black;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);  /* For Webkit browsers */
+  filter: gray;  /* For IE 6 - 9 */
+  -webkit-transition: all .6s ease;  /* Transition for Webkit browsers */
+}
+
+.festival_pic:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    filter: none;
 }
 
 .eachrow {
   margin-right: -10%;
+  margin-bottom: 3%;
 }
 
 // .container-fluid.banner {
