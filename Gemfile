@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'normalize-rails'
+
 gem 'puma'
 
 gem 'validates_email_format_of'
