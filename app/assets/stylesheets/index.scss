@@ -20,3 +20,23 @@
 #bannertext a{
   color: white;
 }
+
+.giant{
+  overflow: hidden;
+}
+
+
+.large-header {
+	position: relative;
+	width: 100%;
+  max-height: 100%;
+	background: #333;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	// z-index: 1;
+}
+//
+// .giant .large-header {
+// 	background-image: url('http://s30.postimg.org/at2av1c67/wall3.jpg');
+// }

@@ -1,20 +1,111 @@
-// .jumbotron1 {
-//   background-image: url('http://www.fuelroom.com/wp-content/uploads/2014/04/concert_crowd-wallpaper-1280x800.jpg');
-//   background-position: top center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   height: 530px;
-//   position: absolute;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   z-index: -1;
-//   margin-top: -13%;
-//   margin-bottom: 30%;
-// }
-//
+.navbar.navbar-default.navbar-static-top{
+    background: rgba(0,0,0,0.4);
+}
+
+.navbar.navbar-default.navbar-static-top .container{
+}
+
+.navfont{
+  color: white;
+}
+
+
+.nav.navbar-nav.navbar-right .btn-clear {
+	background: transparent;
+	color: white;
+	border: 1px solid white;
+}
+
+.btn-clear:hover {
+	background: white;
+	color: #2f2f2f;
+}
+
+.nav.navbar-nav.navbar-right a{
+  color: white;
+}
+
+.nav.navbar-nav.navbar-right .welcome-user{
+  color: white;
+  padding-top: 3%;
+  font-size: 1.2em;
+}
+
+
+
+.jumbotron1 {
+  background-image: url('http://s30.postimg.org/at2av1c67/wall3.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90%;
+  // position: absolute;
+  // top: 50%;
+  // transform: translateY(-50%);
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+  // z-index: -1;
+  margin-top: -5%;
+  // margin-bottom: 30%;
+}
+
+.bannertext2{
+  position: absolute;
+  top: 20%;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  margin: auto;
+  max-width: 700px;
+  color: #fff;
+  text-align: center;
+}
+
+.bannertext2 h1{
+  position: relative;
+  margin-bottom: 0;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 900;
+  font-size: 5.5em;
+  line-height: 1em;
+}
+
+.bannertext2 hr{
+  	border: 1px solid white;
+  	width: 150px;
+}
+
+.bannertext2 i{
+  cursor: pointer;
+  color: white;
+
+}
+
+
+.giphy {
+  background-image: url('http://media.giphy.com/media/3d5XNfu7zOtfG/giphy.gif');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 35%;
+}
+
+.giphy p{
+  // padding-top: 7%;
+  font-size: 3em;
+  text-align: center;
+  color: white;
+}
+
+.list.container {
+  background-color: rgba(24,24,24,1);
+  width: 100%;
+  // margin-top: 10%;
+}
+
+
 // .container2{
 //   text-align: center;
 //   margin-top: 20%;
@@ -38,8 +129,9 @@
 // }
 
 .festpic {
-  // margin-top: 30%;
-  // margin: 2% 10% 2% 10%;
+  margin-top: 8%;
+  margin-left: 22%;
+  // margin: 2% 10% 2% 20%;
 
 }
 
