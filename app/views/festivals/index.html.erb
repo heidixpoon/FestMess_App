@@ -47,6 +47,31 @@
 
 
 <div class = "list container">
+  <h2>Festivals</h2>
+  <div class="festpic">
+    <% @festivals.each do |festival| %>
+      <div class="col-md-6 eachrow">
+
+        <div class="grid">
+          <figure class="effect-jazz">
+            <a href="<%= festival_path(festival) %>">
+              <img src="<%= festival.pic %>" class="festival_pic">
+              <figcaption>
+                <h2><%= festival.event %> <span></span></h2>
+  						  <p><%= festival.address %></p>
+              </figcaption>
+            </a>
+          </figure>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+<!-- <div class = "list container">
   <div class="festpic">
     <% @festivals.each do |festival| %>
       <div class="col-md-6 eachrow">
@@ -56,7 +81,7 @@
       </div>
     <% end %>
   </div>
-</div>
+</div> -->
 
 
 <!--
