@@ -1,9 +1,123 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 
+<nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <a class="navbar-brand navfont" href="./">HYPE Fest Logo</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <% if current_user %>
+              <li class="welcome-user">Welcome back,<%= current_user.name %>!</li>
+              <li><button type="button" class="btn btn-lg btn-clear btn-design"><a href="<%= festivals_path %>" class="sign">Home</a></button></li>
+              <li><button type="button" class="btn btn-lg btn-clear btn-design"><%= link_to "Log Out", log_out_path, :class => 'someclass' %></button></li>
+            <% else %>
+              <li><button type="button" class="btn btn-lg btn-clear btn-design"><%= link_to "Sign Up", sign_up_path, :class => 'someclass' %></button></li>
+              <li><button type="button" class="btn btn-lg btn-clear btn-design"><%= link_to "Log In", log_in_path, :class => 'someclass' %></button></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+</nav>
+
+<div class="jumbotron1" style="background-image: url('<%= @festival.pic %>');">
+  <div class="bannertext2">
+    <h1 class ="contain"><%= @festival.event %></h1>
+    <hr class="aligncenter">
+    <br><br><br><br><br><br><br><br>
+    <!-- <h4>Click to check out some festivals</h4>
+    <h1><a href="#giphy"><i class="ion-ios-arrow-thin-down animated infinite bounce"></i></a></h1> -->
+  </div>
+</div>
+
+
+<div class="details-big">
+
+  <div class="details-links pure-g">
+    <div class="pure-u-1-3">
+      <button class="btn btn-conf btn-clear"><a href="<%= @festival.official %>">Official</a></button>
+    </div>
+    <div class="pure-u-1-3">
+      <button class="btn btn-conf btn-clear"><a href="<%= @festival.facebook %>">Facebook</a></button>
+    </div>
+    <div class="pure-u-1-3">
+      <button class="btn btn-conf btn-clear"><a href="<%= @festival.youtube %>">Youtube</a></button>
+    </div>
+  </div>
+
+  <div class="details-data pure-g">
+    <div class="pure-u-1-2">
+      <i class="ion-ios-location"></i>
+      <br><br>
+      <p><%= @festival.address %></p>
+    </div>
+    <div class="pure-u-1-2">
+      <i class ="ion-ios-calendar-outline"></i>
+      <br><br>
+      <p><%= @festival.date %></p>
+    </div>
+  </div>
+
+  <div class="details-map">
+    <div id="map_canvas" style="width:300px; height:300px;"></div>
+  </div>
+
+  <br><br>
+
+  <div class="fb-share-button" data-href="https://murmuring-gorge-7908.herokuapp.com/festivals/<%=@festival.id%>" data-layout="button_count"></div>
+
+
+  <br><br>
+
+</div>
+
+<!-- <div class="soundcloud"> -->
+  <div class="details-soundcloud">
+    <br>
+    <h4>Live Sets Playlist</h4>
+    <hr class="aligncenter">
+    <iframe width="50%" height="400" scrolling="no" frameborder="no" src="<%= @festival.soundcloud %>"></iframe>
+  </div>
+<!-- </div> -->
+
+<div class="">
+  <div class="fb-comments" data-href="https://murmuring-gorge-7908.herokuapp.com/festivals/<%=@festival.id%>" data-width="500px" data-numposts="5"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 
 <div class="jumbotron1" style="background-image: url('<%= @festival.pic %>');">
   <div class="container2">
-    <!-- <br><br><br><br><br><br><br><br><br><br> -->
     <h1 class ="contain"><%= @festival.event %></h1>
     <h2 class = "contain"><%= @festival.date %></h2>
     <h2 class = "contain"><%= @festival.address %></h2>
@@ -29,9 +143,7 @@
 
   </div>
 
-
-
-</div>
+</div> -->
 
 
 
