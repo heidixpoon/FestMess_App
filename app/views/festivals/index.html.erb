@@ -1,11 +1,67 @@
 
+
+<nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand navfont" href="./">HYPE Fest Logo</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <% if current_user %>
+              <li class="welcome-user">Welcome back,<%= current_user.name %>!</li>
+              <li><button type="button" class="btn btn-lg btn-clear btn-design"><a href="<%= festivals_path %>" class="sign">Home</a></button></li>
+
+              <!-- <li><button type="button" class="btn btn-lg btn-clear btn-design"><%= link_to "Home", festivals_path, :class => 'someclass' %></button></li> -->
+              <li><button type="button" class="btn btn-lg btn-clear btn-design"><%= link_to "Log Out", log_out_path, :class => 'someclass' %></button></li>
+            <% else %>
+              <li><button type="button" class="btn btn-lg btn-clear btn-design"><%= link_to "Sign Up", sign_up_path, :class => 'someclass' %></button></li>
+              <li><button type="button" class="btn btn-lg btn-clear btn-design"><%= link_to "Log In", log_in_path, :class => 'someclass' %></button></li>
+            <% end %>
+            <!-- <li><a href="../navbar/">Default</a></li>
+            <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
+            <li><a href="../navbar-fixed-top/">Fixed top</a></li> -->
+          </ul>
+        </div>
+      </div>
+</nav>
+
 <div class="jumbotron1">
-  <div class="container2">
-    <h1 class ="contain">Check out some festivals</h1>
-    <p></p>
+  <div class="bannertext2">
+    <h1>HYPE Fest</h1>
+    <hr class="aligncenter">
+    <br><br><br><br><br><br><br><br>
+    <h4>Click to check out some festivals</h4>
+    <h1><a href="#giphy"><i class="ion-ios-arrow-thin-down animated infinite bounce"></i></a></h1>
   </div>
 </div>
 
+<div class="giphy" id="giphy">
+  <br><br><br><br><br><br>
+  <p>Browse X Review X Listen</p>
+
+</div>
+
+
+<div class = "list container">
+  <div class="festpic">
+    <% @festivals.each do |festival| %>
+      <div class="col-md-6 eachrow">
+        <a href="<%= festival_path(festival) %>">
+          <img src="<%= festival.pic %>" class="festival_pic">
+        </a>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<!--
 
 <div class="container-fluid banner"></div>
 
@@ -20,7 +76,25 @@
       </div>
     <% end %>
   </div>
-</div>
+</div> -->
+
+
+
+<script type="text/javascript">
+		$('a[href^="#"]').on('click', function(event) {
+
+			var target = $( $(this).attr('href') );
+
+			if( target.length ) {
+				event.preventDefault();
+				$('html, body').animate({
+						scrollTop: target.offset().top
+				}, 1000);
+			}
+
+		});
+</script>
+
 
 
 
