@@ -1,7 +1,7 @@
 # HYPEFest
 ## A web app for browsing, reviewing, and listening to music festivals
 
-### Built with:
+##### Built with:
 - Ruby on Rails
 - PosgreSQL
 - Sorcery Authentication GEM
@@ -11,5 +11,5 @@
 - Facebook API
 - Embedded SoundCloud Player
 
-### Heroku Link: https://murmuring-gorge-7908.herokuapp.com/
-### (CSS and GoogleMap API may not show correctly via Heroku's version)
+##### Heroku Link: https://murmuring-gorge-7908.herokuapp.com/
+##### *CSS and GoogleMap API may not show correctly via Heroku's version*
